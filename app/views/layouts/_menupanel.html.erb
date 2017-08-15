@@ -312,15 +312,13 @@
         <% if current_user.rol == "profesor" %>
         <li><a href="<%= nil %>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li><a href="<%= nil %>"><i class="fa fa-pencil-square-o"></i> Cultivos</a></li>
-        <li><a href="<%= nil %>"><i class="fa fa-pencil-square-o"></i> Estudiantes</a></li>
+        <li><a href="<%= farming_students_path %>"><i class="fa fa-pencil-square-o"></i> Estudiantes</a></li>
         <li><a href="<%= nil %>"><i class="fa fa-pencil-square-o"></i> Bitacoras</a></li>
 
         <% elsif current_user.rol == "estudiante" %>
           <li><a href="<%= nil %>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-          <li><a href="<%= nil %>"><i class="fa fa-th"></i> Bitacora</a></li>
-            <ul>
-                <li><a href="/binnacles"><i class="fa fa-table"></i> Data tables</a></li>
-            </ul>
+          <li><a href="<%= binnacles_path %>"><i class="fa fa-th"></i> Bitacora</a></li>
+       
         <%end%>
       </ul>
     </section>
