@@ -6,10 +6,17 @@ Rails.application.routes.draw do
   resources :farmings
   devise_for :users
 
+
   authenticated :user do
-    root 'panel#index', as: :authenticated_root
+    devise_scope :user do
+      root to: "panel#index", :as => "authenticated"
+    end
   end
 
-    root "devise/sessions#new"
+  unauthenticated do
+    devise_scope :user do
+      root to: "devise/sessions#new", :as => "unauthenticated"
+    end
+  end
 
 end
