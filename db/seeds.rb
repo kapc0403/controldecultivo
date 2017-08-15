@@ -18,8 +18,7 @@ usuarios = User.create([{ nombre:'Sebastian Perez',rol:'estudiante',carrera:'Adm
                       {nombre:'Miguel Pinto',rol: 'profesor', email:'miguel@unac.edu.co', password:'258qwe',password_confirmation:'258qwe'},
                       {nombre:'Manuel Uribe',rol: 'estudiante',carrera:'Musica ',semestre:'1', email:'manuel@unac.edu.co', password:'147asd',password_confirmation:'147asd'},
                       {nombre:'Daniela ALvarez',rol: 'estudiante',carrera:'Preescolar',semestre:'1', email:'daniela@unac.edu.co', password:'963rty',password_confirmation:'963rty'}])
-<<<<<<< HEAD
-=======
+
 
 cultivo = Farming.create! :user_id=> 9, :semilla=> 'frijol',recomendaciones:'Antes del cultivo utilice semillas sanas o certificadas. Prefiera las variedades de semillas resistentes o mejoradas.
                       Evite siembras escalonadas. Procure que las épocas de siembra, floración y cosecha coincidan con períodos de lluvias moderadas o en su defecto, establezca su cultivo en épocas de siembra tradicionales en su región.
@@ -62,4 +61,3 @@ cultivo = Farming.create! :user_id=>9, :semilla=> 'remolacha',recomendaciones:'E
                             Riego: Se debe regar el suelo con el fin de mantenerlo húmedo, sin que este se  encharque.
                             Siembra: Se debe sembrar a una profundidad de 1 cm y de preferencia en el lugar definitivo, ya que el trasplante puede llegar a dañar fácilmente la raíz. Se debe retirar las plantas invasoras
                             ya que compiten por recursos y nutrientes. Tampoco debes permitir que las raíces estén expuestos, ya que pueden endurecerse. Se debe cubrir las raíces expuestas con tierra o paja.'
->>>>>>> 279a8b42088f3562c8e8d029ab5161ceecc2120d
