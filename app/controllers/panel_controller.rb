@@ -1,6 +1,6 @@
 class PanelController < ApplicationController
   def index
- 
+
 
   end
   def joincultivo_estudiante
@@ -8,6 +8,11 @@ class PanelController < ApplicationController
     @cultivo = params[:idcultivo]
     @save = FarmingStudent.new(:user_id=>@usuario,:farming_id=>@cultivo)
     @save.save
+
+    @usermail = User.find(@usuario)
+    @teachermail = Farming.find(@cultivo).user
+    StudentMailer.addedusertofarming(@usermail).deliver_later
+    StudentMailer.addteachertofarming(@teachermail).deliver_later
     redirect_to "/"
   end
 
