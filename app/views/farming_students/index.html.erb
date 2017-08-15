@@ -1,34 +1,42 @@
 <p id="notice"><%= notice %></p>
-<html>
 
 
 
-  <h1>Farming Students UNAC</h1>
 
-  <table>
+  <h1>Cultivos de estudiantes</h1>
+
+
+<div class = "table">
+
+ <table id="example1" class="table table-bordered table-striped">
     <thead>
       <tr>
-        <th>  User</th>
-        <th>Farming</th>
+        <th>Usuario</th>
+        <th>Cultivo</th>
         <th colspan="3"></th>
       </tr>
     </thead>
 
-    <tbody>
-      <% @farming_students.each do |farming_student| %>
-       <tr>
-          <td><%= farming_student.user %></td>
-          <td><%= farming_student.farming %></td>
-          <td><%= link_to 'Show', farming_student %></td>
-          <td><%= link_to 'Edit', edit_farming_student_path(farming_student) %></td>
-          <td><%= link_to 'Destroy', farming_student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
+   
   </table>
 
-  <br>
+</div>
+  <%= link_to 'Nuevo Cultivo', new_farming_student_path %>
 
-  <%= link_to 'New Farming Student', new_farming_student_path %>
 
-</html>
+<script type="text/javascript">
+            $(function() {
+                $("#example1").dataTable();
+                $('#example2').dataTable({
+                    "bPaginate": true,
+                    "bLengthChange": false,
+                    "bFilter": false,
+                    "bSort": true,
+                    "bInfo": true,
+                    "bAutoWidth": false
+                });
+            });
+        </script>
+
+
+
