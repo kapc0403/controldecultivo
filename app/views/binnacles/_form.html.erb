@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+<div>
 <%= form_with(model: binnacle, local: true) do |form| %>
   <% if binnacle.errors.any? %>
     <div id="error_explanation">
@@ -11,6 +20,10 @@
     </div>
   <% end %>
 
+
+
+
+
   <div class="field">
     <%= form.hidden_field :user_id, id: :binnacle_user_id, value:current_user.id %>
   </div>
@@ -21,6 +34,16 @@
   </div>
 
   <div class="field">
+    <div class="form-group">
+      <label>Date masks:</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+            </div>
+            <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+            </div><!-- /.input group -->
+          </div><!-- /.form group -->
+
     <%= form.label :fecha %>
     <%= form.text_field :fecha, id: :binnacle_fecha %>
   </div>
@@ -59,3 +82,5 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+</div>
