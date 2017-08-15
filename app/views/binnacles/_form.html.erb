@@ -49,96 +49,62 @@
     <%= form.text_field :farming_id, id: :binnacle_farming_id %>
   </div>
   
-  <div class="row"
+  <div class="row" >
 
-  <div>
-    <label>ads</label>
-     <%= form.text_field :fecha, id: :binnacle_fecha, class: "form-control" %>
-  </div>
-
-
-  <div class="form-group">
+    <div class="col-md-8">
       <label>Fecha</label>
-          <div class="input-group">
-            <div class="fa fa-calendar">
-               
-            </div>
-            <!--<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>-->
-          </div><!-- /.input group -->
+       <%= form.text_field :fecha, id: :binnacle_fecha, class: "form-control"%>
+      </div>
   </div>
 
-  <div class="field">
-    <div class="form-group">
+<div class="row" >
+
+    <div class="col-md-8">
       <label>Temperatura</label>
-          <div class="input-group">
-                <i class="fa fa-thermometer-empty"></i>
-                <%= form.text_field :temperatura, id: :binnacle_temperatura %>
-            </div>
-            <!--<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>-->
-            </div><!-- /.input group -->
-    
-  </div>
+       <%= form.text_field :temperatura, id: :binnacle_temperatura, class: "form-control"%>
+      </div>
+</div>
 
-  <div class="field">
-    <div class="form-group">
+<div class="row" >
+
+    <div class="col-md-8">
       <label>Número de Riegos</label>
-          <div class="input-group">
-                <i class="fa fa-shower"></i>
-                <%= form.text_field :nroriegos, id: :binnacle_nroriegos %>
-            </div>
-            <!--<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>-->
-            </div><!-- /.input group -->
-    
-  </div>
+        <%= form.text_field :nroriegos, id: :binnacle_nroriegos, class: "form-control"%>
+      </div>
+</div>
 
-  <div class="field">
-    <div class="form-group">
+<div class="row" >
+
+    <div class="col-md-8">
       <label>Observaciones</label>
-          <div class="input-group">
-                <i class="fa fa-pencil-square-o"></i>
-                <%= form.text_area :observaciones, id: :binnacle_observaciones %>
-            </div>
-            <!--<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>-->
-            </div><!-- /.input group -->
-   
-    
-  </div>
+        <%= form.text_area :observaciones, id: :binnacle_observaciones, class: "form-control"%>
+      </div>
+</div>
 
-  <div class="field">
-    <div class="form-group">
+<div class="row" >
+
+    <div class="col-md-8">
       <label>Foto 1</label>
-          <div class="input-group">
-                <i class="fa fa-picture-o"></i>
-                <%= form.text_field :foto1, id: :binnacle_foto1 %>
-            </div>
-            <!--<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>-->
-            </div><!-- /.input group -->
-    
-  </div>
+        <%= form.text_field :foto1, id: :binnacle_foto1, class: "form-control"%>
+      </div>
+</div>
+ 
+<div class="row" >
 
-  <div class="field" class="form-control">
-    <div class="form-group" >
+    <div class="col-md-8">
       <label>Foto 2</label>
-          <div class="input-group">
-                <i class="fa fa-picture-o"></i>
-                <%= form.text_field :foto2, id: :binnacle_foto2 %>
-            </div>
-            <!--<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>-->
-            </div><!-- /.input group -->
-    
-  </div>
+        <%= form.text_field :foto2, id: :binnacle_foto2, class: "form-control"%>
+      </div>
+</div>
 
-  <div class="field">
-    <div class="form-group">
+<div class="row" >
+
+    <div class="col-md-8">
       <label>Foto 3</label>
-          <div class="input-group">
-                <i class="fa fa-picture-o"></i>
-                <%= form.text_field :foto3, id: :binnacle_foto3 %>
-            </div>
-            <!--<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>-->
-            </div><!-- /.input group -->
-    
-  </div>
+        <%= form.text_field :foto3, id: :binnacle_foto3,  class: "form-control"%>
+      </div>
+</div>
+
 
   <div class="actions">
     <%= form.submit %>
