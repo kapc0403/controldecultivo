@@ -536,6 +536,14 @@ window.onload = gettingJSON;
   </style>
   <%= @informacion.recomendaciones%>
 </p>
+<br>
+<p> Estudiantes inscritos en este cultivo:
+<ul>
+<% @getusuario = FarmingStudent.where("farming_id=?", @semilla) %>
+<% @getusuario.each do |gu| %>
+<li><%= gu.user.nombre %></li>
+<%end%>
+</ul>
 <% else %>
 
 
