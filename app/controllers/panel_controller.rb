@@ -9,6 +9,9 @@ class PanelController < ApplicationController
     @save = FarmingStudent.new(:user_id=>@usuario,:farming_id=>@cultivo)
     @save.save
 
+    @saveuser = User.update(current_user.id, :cultivo=>params[:idcultivo])
+    @saveuser.save
+
     @usermail = User.find(@usuario)
     @teachermail = Farming.find(@cultivo).user
     StudentMailer.addedusertofarming(@usermail).deliver_later

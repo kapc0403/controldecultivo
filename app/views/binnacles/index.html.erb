@@ -1,132 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Bienvenidos a su Bitacora</h1>                            
+<h1>Bienvenidos a su Bitacora</h1>
+<%= link_to 'Nueva Bitacora', new_binnacle_path, class:"btn btn-primary" %><br>
 
                             <div class="box">
                                 <div class="box-header">
-                                    <h3 class="box-title">Tabla de Datos con el Registro de su Actividad</h3>                                    
+                                    <h3 class="box-title">Tabla de Datos con el Registro de su Actividad</h3>
                                 </div><!-- /.box-header -->
                                 <div class="box-body table-responsive">
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Usuario</th>
                                                 <th>Cultivo</th>
                                                 <th>Fecha</th>
                                                 <th>Temperatura</th>
                                                 <th>Número de Riegos</th>
-                                                <th>Observaciones</th>
-                                                <th>Temperatura</th>
                                                 <th>Foto 1</th>
                                                 <th>Foto 2</th>
                                                 <th>Foto 3</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                          <% @binnacles.each do |bs| %>
                                             <tr>
-                                                <th> </th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
+                                                <th><%= bs.farming.semilla %></th>
+                                                <th><%= bs.fecha %></th>
+                                                <th><%= bs.temperatura %></th>
+                                                <th><%= bs.nroriegos %></th>
+                                                <th><%= bs.foto1 %></th>
+                                                <th><%= bs.foto2 %></th>
+                                                <th><%= bs.foto3 %></th>
                                             </tr>
-                                            <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                            </tr>
-                                            <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                            </tr>
-                                            <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                            </tr>
-                                            <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                            </tr>
-                                            <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                            </tr>
-                                            <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                            </tr>
-                                            <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                            </tr>
+                                          <%end%>
+
                                     </table>
                                 </div><!-- /.box-body -->
                             </div><!-- /.box -->
 <br>
-
-<%= link_to 'Nueva Bitacora', new_binnacle_path %>
-
-
 
 <script type="text/javascript">
             $(function() {
@@ -141,13 +51,3 @@
                 });
             });
         </script>
-
-
-
-
-
-
-
-
-
-
