@@ -381,6 +381,7 @@ function gettingJSON(){
     $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=6.25&lon=-75.56&APPID=24705a0916896d12b44e849327037eaf",function(json){
         if (JSON.stringify(json.main.temp/10) < 20 ) {
           document.getElementById("night").style.display= "";
+          document.getElementById("temp2").innerHTML = (json.main.temp/10).toFixed(2)+"°";
         }else{
           document.getElementById("day").style.display= "";
           document.getElementById("temp").innerHTML = (json.main.temp/10).toFixed(2)+"°";
@@ -405,7 +406,7 @@ window.onload = gettingJSON;
               <div class="city"><span>Ciudad:</span> Medellín</div>
               <div class="night">Estado: Normal - <%= Time.now.strftime("%H:%M") %></div>
 
-              <div class="temp" id="temp"></div>
+              <div class="temp" id="temp2"></div>
 
               <div class="wind">
                 <svg version="1.1" id="wind" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -471,7 +472,7 @@ window.onload = gettingJSON;
           <div class="info">
             <div class="city"><span>Ciudad:</span> Medellín</div>
             <div class="night">Estado: Normal - <%= Time.now.strftime("%H:%M") %></div>
-
+<br><br>
             <div class="temp" id="temp"></div>
 
             <div class="wind">
