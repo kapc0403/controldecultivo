@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   devise_for :users
 
 
+get "/joincultivo_estudiante/:idusuario/:idcultivo", to: "panel#joincultivo_estudiante"
+
   authenticated :user do
     devise_scope :user do
       root to: "panel#index", :as => "authenticated"
