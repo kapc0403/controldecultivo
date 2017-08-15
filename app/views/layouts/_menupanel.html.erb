@@ -317,10 +317,8 @@
 
         <% elsif current_user.rol == "estudiante" %>
           <li><a href="<%= nil %>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-          <li><a href="<%= nil %>"><i class="fa fa-th"></i> Bitacora</a></li>
-            <ul>
-                <li><a href="/binnacles"><i class="fa fa-table"></i> Data tables</a></li>
-            </ul>
+          <li><a href="<%= binnacles_path %>"><i class="fa fa-th"></i> Bitacora</a></li>
+       
         <%end%>
       </ul>
     </section>
