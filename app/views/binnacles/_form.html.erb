@@ -1,0 +1,62 @@
+<%= form_with(model: binnacle, local: true) do |form| %>
+  <% if binnacle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(binnacle.errors.count, "error") %> prohibited this binnacle from being saved:</h2>
+
+      <ul>
+      <% binnacle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :binnacle_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :farming_id %>
+    <%= form.text_field :farming_id, id: :binnacle_farming_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha %>
+    <%= form.text_field :fecha, id: :binnacle_fecha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :temperatura %>
+    <%= form.text_field :temperatura, id: :binnacle_temperatura %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nroriegos %>
+    <%= form.text_field :nroriegos, id: :binnacle_nroriegos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :observaciones %>
+    <%= form.text_area :observaciones, id: :binnacle_observaciones %>
+  </div>
+
+  <div class="field">
+    <%= form.label :foto1 %>
+    <%= form.text_field :foto1, id: :binnacle_foto1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :foto2 %>
+    <%= form.text_field :foto2, id: :binnacle_foto2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :foto3 %>
+    <%= form.text_field :foto3, id: :binnacle_foto3 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

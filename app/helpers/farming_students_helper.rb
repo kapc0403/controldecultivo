@@ -1,0 +1,2 @@
+module FarmingStudentsHelper
+end

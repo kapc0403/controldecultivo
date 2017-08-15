@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  farming: one
+  fecha: MyString
+  temperatura: MyString
+  nroriegos: MyString
+  observaciones: MyText
+  foto1: MyString
+  foto2: MyString
+  foto3: MyString
+
+two:
+  user: two
+  farming: two
+  fecha: MyString
+  temperatura: MyString
+  nroriegos: MyString
+  observaciones: MyText
+  foto1: MyString
+  foto2: MyString
+  foto3: MyString

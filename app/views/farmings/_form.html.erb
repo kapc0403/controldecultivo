@@ -1,0 +1,32 @@
+<%= form_with(model: farming, local: true) do |form| %>
+  <% if farming.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(farming.errors.count, "error") %> prohibited this farming from being saved:</h2>
+
+      <ul>
+      <% farming.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :farming_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :semilla %>
+    <%= form.text_field :semilla, id: :farming_semilla %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recomendaciones %>
+    <%= form.text_area :recomendaciones, id: :farming_recomendaciones %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

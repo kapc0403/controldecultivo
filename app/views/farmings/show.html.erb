@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @farming.user %>
+</p>
+
+<p>
+  <strong>Semilla:</strong>
+  <%= @farming.semilla %>
+</p>
+
+<p>
+  <strong>Recomendaciones:</strong>
+  <%= @farming.recomendaciones %>
+</p>
+
+<%= link_to 'Edit', edit_farming_path(@farming) %> |
+<%= link_to 'Back', farmings_path %>

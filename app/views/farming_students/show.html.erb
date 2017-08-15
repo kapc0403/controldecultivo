@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @farming_student.user %>
+</p>
+
+<p>
+  <strong>Farming:</strong>
+  <%= @farming_student.farming %>
+</p>
+
+<%= link_to 'Edit', edit_farming_student_path(@farming_student) %> |
+<%= link_to 'Back', farming_students_path %>

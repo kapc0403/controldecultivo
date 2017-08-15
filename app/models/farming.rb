@@ -1,0 +1,3 @@
+class Farming < ApplicationRecord
+  belongs_to :user
+end
