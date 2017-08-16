@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170815221859) do
+=======
+ActiveRecord::Schema.define(version: 20170816000053) do
+>>>>>>> d0e4ad8485fef9d3e139764419705d35db517a6f
 
   create_table "binnacles", force: :cascade do |t|
     t.integer "user_id"
@@ -19,11 +23,20 @@ ActiveRecord::Schema.define(version: 20170815221859) do
     t.string "temperatura"
     t.string "nroriegos"
     t.text "observaciones"
-    t.string "foto1"
-    t.string "foto2"
-    t.string "foto3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "foto1_file_name"
+    t.string "foto1_content_type"
+    t.integer "foto1_file_size"
+    t.datetime "foto1_updated_at"
+    t.string "foto2_file_name"
+    t.string "foto2_content_type"
+    t.integer "foto2_file_size"
+    t.datetime "foto2_updated_at"
+    t.string "foto3_file_name"
+    t.string "foto3_content_type"
+    t.integer "foto3_file_size"
+    t.datetime "foto3_updated_at"
     t.index ["farming_id"], name: "index_binnacles_on_farming_id"
     t.index ["user_id"], name: "index_binnacles_on_user_id"
   end
@@ -64,6 +77,7 @@ ActiveRecord::Schema.define(version: 20170815221859) do
     t.string "semestre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "cultivo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

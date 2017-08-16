@@ -3,8 +3,11 @@ class BinnaclesController < ApplicationController
 
 
   def index
-    @binnacles = Binnacle.all
-    
+    if current_user.rol == "profesor"
+      @binnacles = Binnacle.all
+    else
+      @binnacles = Binnacle.where("user_id=?", current_user.id)
+    end
   end
 
   # GET /binnacles/1
