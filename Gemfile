@@ -7,6 +7,7 @@ end
 
 gem 'devise'
 gem "font-awesome-rails"
+gem "paperclip"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

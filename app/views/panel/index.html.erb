@@ -1,11 +1,5 @@
 
 <style>
-body {
-  font-family: 'Varela Round', helvetica, arial, sans-serif;
-  color: #000000;
-  font-size: 14px;
-  line-height: 20px;
-}
 
 .promo-card {
   overflow: hidden;
@@ -385,6 +379,7 @@ function gettingJSON(){
         }else{
           document.getElementById("day").style.display= "";
           document.getElementById("temp").innerHTML = (json.main.temp/10).toFixed(2)+"°";
+          document.getElementById("temp3").innerHTML = (json.main.temp/10).toFixed(2)+"°";
         }
     });
 }
@@ -528,13 +523,11 @@ window.onload = gettingJSON;
 </div>
 
 
+<p>La temperatura actual es: <span id="temp3"></span>, su cultivo no se encuentra en riesgo. <i class="fa fa-check" style="color:green"></i></p>
+
 <p>
   <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-  <style media="screen">
-    p{
-      font-size: 18px;
-    }
-  </style>
+
   <%= @informacion.recomendaciones%>
 </p>
 <br>

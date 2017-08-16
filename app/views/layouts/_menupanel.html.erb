@@ -310,15 +310,15 @@
         <li class="header">MENU DE NAVEGACIÓN</li>
 
         <% if current_user.rol == "profesor" %>
-        <li><a href="<%= nil %>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="<%= nil %>"><i class="fa fa-pencil-square-o"></i> Cultivos</a></li>
+        <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="<%= farmings_path %>"><i class="fa fa-pencil-square-o"></i> Cultivos</a></li>
         <li><a href="<%= farming_students_path %>"><i class="fa fa-pencil-square-o"></i> Estudiantes</a></li>
-        <li><a href="<%= nil %>"><i class="fa fa-pencil-square-o"></i> Bitacoras</a></li>
+        <li><a href="<%= binnacles_path %>"><i class="fa fa-pencil-square-o"></i> Bitacoras</a></li>
 
         <% elsif current_user.rol == "estudiante" %>
-          <li><a href="<%= nil %>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+          <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
           <li><a href="<%= binnacles_path %>"><i class="fa fa-th"></i> Bitacora</a></li>
-       
+
         <%end%>
       </ul>
     </section>
@@ -351,7 +351,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0
     </div>
-    <strong>Copyright &copy; <%= Time.now.strftime("%Y") %> <a href="http://kdrex.net" target="_blank">Kdrex.net <img src="http://kdrex.net/img/favicon.png"></a></strong> - All rights
+    <strong>Copyright &copy; <%= Time.now.strftime("%Y") %> <a href="" target="_blank">Alpha Equipment <img src="http://www.triumf.ca/sites/default/files/images/alphalogo_a4arial.png" width=26px;></a></strong> - All rights
     reserved.
   </footer>
 
