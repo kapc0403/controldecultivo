@@ -359,8 +359,7 @@ height: 32px;
 </style>
 
 
-
-
+<% if (current_user.rol) == 'estudiante'%>
 <% @farmings = Farming.all %>
 <% if  @semilla = FarmingStudent.where(("user_id=?"),current_user.id).count >0%>
 <% @semilla = FarmingStudent.where(("user_id=?"),current_user.id).first.farming_id %>
@@ -567,12 +566,12 @@ window.onload = gettingJSON;
 
       <div class="promo-flex">
           <% @farmings.each do |farming| %>
-        <div data-ix="blog-card" class="w-clearfix w-preserve-3d promo-card"><img width="100%" src="http://placehold.it/300x313">
+        <div data-ix="blog-card" class="w-clearfix w-preserve-3d promo-card"><img width="100%" src="">
           <div class="blog-bar color-pink"></div>
           <div class="blog-post-text">
             <%= farming.semilla %>
             <div class="blog-description black-text"><%=farming.user.nombre%></div>
-            <div class="blog-description black-text">Integrantes: 0 <br> <a href="/joincultivo_estudiante/<%=current_user.id.to_s%>/<%=farming.id%>" class="btn btn-success">Registrar</a></div>
+            <div class="blog-description black-text">Integrantes: <% %> <br> <a href="/joincultivo_estudiante/<%=current_user.id.to_s%>/<%=farming.id%>" class="btn btn-success">Registrar</a></div>
 
           </div>
         </div>
@@ -583,4 +582,15 @@ window.onload = gettingJSON;
 </body>
 </html>
 
-<% end %>
+<%end%>
+<%else%>
+<% @docente= Farming.where("user_id=?",current_user.id).first.id%>
+<% @cultivo = Farming.find(@docente)%>
+<h2> <%= @cultivo.semilla%> </h2>
+<ul>
+  <% FarmingStudent.where("farming_id=?", @cultivo.id).each do |dc|%>
+  <li><%=dc.user.nombre%></li>
+  <%end%>
+</ul>
+
+<%end%>

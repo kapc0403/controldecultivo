@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170815132515) do
+ActiveRecord::Schema.define(version: 20170815221859) do
 
   create_table "binnacles", force: :cascade do |t|
     t.integer "user_id"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170815132515) do
     t.text "recomendaciones"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "est_inscritos"
     t.index ["user_id"], name: "index_farmings_on_user_id"
   end
 

@@ -1,10 +1,10 @@
 class BinnaclesController < ApplicationController
   before_action :set_binnacle, only: [:show, :edit, :update, :destroy]
 
-  # GET /binnacles
-  # GET /binnacles.json
+
   def index
     @binnacles = Binnacle.all
+    
   end
 
   # GET /binnacles/1
