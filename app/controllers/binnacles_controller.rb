@@ -1,8 +1,7 @@
 class BinnaclesController < ApplicationController
   before_action :set_binnacle, only: [:show, :edit, :update, :destroy]
 
-  # GET /binnacles
-  # GET /binnacles.json
+
   def index
     if current_user.rol == "profesor"
       @binnacles = Binnacle.all
