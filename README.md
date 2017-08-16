@@ -5,6 +5,6 @@
 5. En la raiz del proyecto mediante consola ejecutar: rake db:seed
 6. 2. En la raiz del proyecto mediante consola ejecutar: rails s (Esto levanta el servidor)
 7. Abrir el proyecto en el navegador con la dirección: localhost:3000
-8. Revisar documento Alpha-equiment.docx
+8. Revisar el wiki del repositorio
 
 Si surgen dudas escribir al correo ricardo.ruiz@unac.edu.co o kevinp0403@gmail.com
