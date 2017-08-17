@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170815221859) do
-=======
 ActiveRecord::Schema.define(version: 20170816000053) do
->>>>>>> d0e4ad8485fef9d3e139764419705d35db517a6f
 
   create_table "binnacles", force: :cascade do |t|
     t.integer "user_id"

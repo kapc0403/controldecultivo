@@ -22,172 +22,62 @@
     <%= form.hidden_field :user_id, id: :binnacle_user_id, value: current_user.id %>
     <%= form.hidden_field :farming_id, id: :binnacle_farming_id, value: current_user.cultivo %>
 
-<<<<<<< HEAD
-  <div class="field">
-    <%= form.hidden_field :user_id, id: :binnacle_user_id, value:current_user.id %>
-  </div>
-
-
-<div class="box box-danger">
-                                <div class="box-header">
-                                </div>
-                                <div class="box-body">
-                                    <!-- Date dd/mm/yyyy -->
-                                    <div class="form-group">
-                                        <div class="input-group">
-
-                                            </div>
-
-                                        </div><!-- /.input group -->
-                                    </div><!-- /.form group -->
-
-
-
-  <div class="field">
-    <%= form.label :Cultivo%>
-    <%= form.text_field :farming_id, id: :binnacle_farming_id %>
-  </div>
-
-  <div class="row"
-
-  <div>
-    <label>ads</label>
-     <%= form.text_field :fecha, id: :binnacle_fecha, class: "form-control" %>
-  </div>
-=======
->>>>>>> d0e4ad8485fef9d3e139764419705d35db517a6f
 
   <div class="row" >
 
     <div class="col-md-8">
       <label>Fecha</label>
-<<<<<<< HEAD
-          <div class="input-group">
-            <div class="fa fa-calendar">
-
-            </div>
-            <!--<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>-->
-          </div><!-- /.input group -->
-=======
        <%= form.text_field :fecha, id: :binnacle_fecha, class: "form-control", value:Time.now.strftime("%F") %>
       </div>
->>>>>>> d0e4ad8485fef9d3e139764419705d35db517a6f
   </div>
 
 <div class="row" >
 
     <div class="col-md-8">
       <label>Temperatura</label>
-<<<<<<< HEAD
-          <div class="input-group">
-                <i class="fa fa-thermometer-empty"></i>
-                <%= form.text_field :temperatura, id: :binnacle_temperatura %>
-            </div>
-            <!--<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>-->
-            </div><!-- /.input group -->
-
-  </div>
-=======
        <%= form.text_field :temperatura, id: :binnacle_temperatura, class: "form-control" %>
       </div>
 </div>
->>>>>>> d0e4ad8485fef9d3e139764419705d35db517a6f
 
 <div class="row" >
 
     <div class="col-md-8">
       <label>Número de Riegos</label>
-<<<<<<< HEAD
-          <div class="input-group">
-                <i class="fa fa-shower"></i>
-                <%= form.text_field :nroriegos, id: :binnacle_nroriegos %>
-            </div>
-            <!--<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>-->
-            </div><!-- /.input group -->
-
-  </div>
-=======
         <%= form.text_field :nroriegos, id: :binnacle_nroriegos, class: "form-control"%>
       </div>
 </div>
->>>>>>> d0e4ad8485fef9d3e139764419705d35db517a6f
 
 <div class="row" >
 
     <div class="col-md-8">
       <label>Observaciones</label>
-<<<<<<< HEAD
-          <div class="input-group">
-                <i class="fa fa-pencil-square-o"></i>
-                <%= form.text_area :observaciones, id: :binnacle_observaciones %>
-            </div>
-            <!--<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>-->
-            </div><!-- /.input group -->
-
-
-  </div>
-=======
         <%= form.text_area :observaciones, id: :binnacle_observaciones, class: "form-control"%>
       </div>
 </div>
 
 <div class="row" >
->>>>>>> d0e4ad8485fef9d3e139764419705d35db517a6f
 
     <div class="col-md-8">
       <label>Foto 1</label>
-<<<<<<< HEAD
-          <div class="input-group">
-                <i class="fa fa-picture-o"></i>
-                <%= form.text_field :foto1, id: :binnacle_foto1 %>
-            </div>
-            <!--<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>-->
-            </div><!-- /.input group -->
-
-  </div>
-=======
         <%= form.file_field :foto1, id: :binnacle_foto1, class: "form-control"%>
       </div>
 </div>
 
 <div class="row" >
->>>>>>> d0e4ad8485fef9d3e139764419705d35db517a6f
 
     <div class="col-md-8">
       <label>Foto 2</label>
-<<<<<<< HEAD
-          <div class="input-group">
-                <i class="fa fa-picture-o"></i>
-                <%= form.text_field :foto2, id: :binnacle_foto2 %>
-            </div>
-            <!--<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>-->
-            </div><!-- /.input group -->
-
-  </div>
-=======
         <%= form.file_field :foto2, id: :binnacle_foto2, class: "form-control"%>
       </div>
 </div>
 
 <div class="row" >
->>>>>>> d0e4ad8485fef9d3e139764419705d35db517a6f
 
     <div class="col-md-8">
       <label>Foto 3</label>
-<<<<<<< HEAD
-          <div class="input-group">
-                <i class="fa fa-picture-o"></i>
-                <%= form.text_field :foto3, id: :binnacle_foto3 %>
-            </div>
-            <!--<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>-->
-            </div><!-- /.input group -->
-
-  </div>
-=======
         <%= form.file_field :foto3, id: :binnacle_foto3,  class: "form-control"%>
       </div>
 </div>
->>>>>>> d0e4ad8485fef9d3e139764419705d35db517a6f
 
 <br>
   <div class="actions">
@@ -197,9 +87,6 @@
 <% end %>
 </div><!-- /.form group -->
 </div>
-<<<<<<< HEAD
-</form>
-=======
 
 
 <script>
@@ -208,7 +95,5 @@ function gettingJSON(){
         document.getElementById("binnacle_temperatura").value = (json.main.temp/10).toFixed(2)+"°";
     });
 }
-
 window.onload = gettingJSON;
 </script>
->>>>>>> d0e4ad8485fef9d3e139764419705d35db517a6f
